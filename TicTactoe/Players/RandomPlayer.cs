@@ -13,7 +13,19 @@ public class RandomPlayer : Player
         this.Icon = icon;
     }
 
-    public override Result<PlayerMove> GetNextMove()
-        => PlayerMove.Random;
+    public override async Task<Result<PlayerMove>> GetNextMove()
+    {
+        Console.Write($"{this.Icon} is thinking");
+
+        for (int i = 0; i < 3; i++)
+        {
+            Console.Write(".");
+            await Task.Delay(1000);
+        }
+        Console.WriteLine(); 
+
+        await Task.Delay(3000);
+        return PlayerMove.Random; 
+    }
 
 }

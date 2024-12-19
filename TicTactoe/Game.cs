@@ -31,7 +31,7 @@ public class Game
 
         while (true)
         {
-            Result<PlayerMove> playerMoves = this.currentPlayer.GetNextMove();
+            Result<PlayerMove> playerMoves = currentPlayer.GetNextMove().Result;
             if (playerMoves.IsFailure)
             {
                 this.display.WriteLine(playerMoves.Error);
@@ -39,7 +39,7 @@ public class Game
             }
 
             bool movePlayedSuccessfully = this.board.PlayMoveOnBoard(playerMoves.Value, this.currentPlayer.Icon);
-            if (movePlayedSuccessfully is false)
+            if (movePlayedSuccessfully is false )
             {
                 this.display.WriteLine("Invalid move");
                 continue;
