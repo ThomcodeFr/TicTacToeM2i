@@ -65,7 +65,7 @@ public class Board
     private void DisplayHeader()
     {
         display.WriteLine(new string('=', display.Width));
-        display.WriteLine(".NET M2I".PadLeft(display.Width / 2));
+        display.WriteLine(" TicTacToe .NET M2I".PadLeft(display.Width / 2));
         display.WriteLine(new string('=', display.Width));
     }
 

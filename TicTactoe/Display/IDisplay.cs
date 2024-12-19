@@ -29,6 +29,9 @@ public class ConsoleDisplay : IDisplay
     }
 }
 
+/// <summary>
+/// Mock de la console
+/// </summary>
 public class DebugDisplay : IDisplay
 {
     public int Width => 0;

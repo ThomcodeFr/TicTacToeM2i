@@ -5,7 +5,7 @@ using TicTacToe.Boards;
 
 namespace TicTacToeTests
 {
-    public class RandomPlayerTest
+    public class RandomPlayerTests
     {
         [Fact]
         public void GetNextMove_Default_ReturnAValidPlayerMove()
